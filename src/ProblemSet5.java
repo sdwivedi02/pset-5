@@ -136,6 +136,17 @@ public class ProblemSet5 {
 
     public int triplets(String text) {
 
+      if (text != null) {
+            int numberOfTriplets = 0;
+            for (int i = 0; i <= text.length() - 3; i++) {
+                if (text.charAt(i) == text.charAt(i + 1) && text.charAt(i) == text.charAt(i + 2)) {
+                    numberOfTriplets++;
+                }
+            }
+            return numberOfTriplets;
+        }
+        return -1;
+
     }
 
     /*
