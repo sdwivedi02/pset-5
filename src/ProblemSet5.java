@@ -76,6 +76,13 @@ public class ProblemSet5 {
 
     public String middleMan(String text) {
 
+      if (text != null && text.length() % 2 == 1 && text.length() >= 3) {
+            double middle = text.length() / 2;
+            String middleThreeCharacters = text.substring((int)(middle - 0.5), (int)(middle + 2.5));
+            return middleThreeCharacters;
+        }
+        return text;
+
     }
 
     /*
