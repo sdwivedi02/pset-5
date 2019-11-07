@@ -94,6 +94,15 @@ public class ProblemSet5 {
 
     public boolean isCentered(String text, String target) {
 
+       if (text != null && text.length() % 2 == 1 && target != null && target.length() == 3) {
+            double middle = text.length() / 2;
+            String middleThreeCharacters = text.substring((int)(midpoint - 0.5), (int)(midpoint + 2.5));
+            if (middleThreeCharacters.equals(target)) {
+                return true;
+            }
+        }
+        return false;
+
     }
 
     /*
