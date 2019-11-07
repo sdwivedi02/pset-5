@@ -39,6 +39,14 @@ public class ProblemSet5 {
 
     public String surroundMe(String in, String out) {
 
+      if (in != null && out != null && out.length() == 4) {
+            String firstTwoCharacters = out.substring(0, 2);
+            String lastTwoCharacters = out.substring(2, 4);
+            String surroundString = firstTwoCharacters + in +lastTwoCharacters;
+            return surroundString;
+        }
+        return in;
+
     }
 
     /*
