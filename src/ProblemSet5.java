@@ -178,6 +178,24 @@ public class ProblemSet5 {
 
     public long sequence(String text) {
 
+      if (text != null) {
+            text += " ";
+            long longestSequence = 0;
+            long lengthOfSequence = 1;
+            for (int i = 0; i < text.length() - 2; i++) {
+                while (text.charAt(i) == text.charAt(i + 1)) {
+                    lengthOfSequence += 1;
+                    i++;
+                }
+                if (lengthOfSequence > longestSequence) {
+                    longestSequence = lengthOfSequence;
+                }
+                lengthOfSequence = 1;
+            }
+            return longestSequence;
+        }
+        return -1;
+
     }
 
     /*
