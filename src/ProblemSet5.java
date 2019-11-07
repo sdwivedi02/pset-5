@@ -58,6 +58,14 @@ public class ProblemSet5 {
 
     public String endsMeet(String text, int n) {
 
+      if (text != null && (text.length() >= 1 && text.length() <= 10) && (n >= 1 && n <= text.length())) {
+            String firstn = text.substring(0, n);
+            String lastn = text.substring(text.length() - n, text.length());
+            String newString = firstn + lastn;
+            return newString;
+        }
+        return newString;
+
     }
 
     /*
