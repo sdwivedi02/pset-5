@@ -96,7 +96,7 @@ public class ProblemSet5 {
 
        if (text != null && text.length() % 2 == 1 && target != null && target.length() == 3) {
             double middle = text.length() / 2;
-            String middleThreeCharacters = text.substring((int)(midpoint - 0.5), (int)(midpoint + 2.5));
+            String middleThreeCharacters = text.substring((int)(middle - 0.5), (int)(middle + 2.5));
             if (middleThreeCharacters.equals(target)) {
                 return true;
             }
@@ -112,6 +112,19 @@ public class ProblemSet5 {
      */
 
     public int countMe(String text, char suffix) {
+
+      if (text != null && (((suffix >= 65 && suffix <= 90) || (suffix >= 97 && suffix <= 121)))) {
+            int numberOfWords = 0;
+            String string = Character.toString(suffix);
+            String individualWords[] = text.split(" ");
+            for (int i = 0; i < individualWords.length; i++) {
+                if (individualWords[i].endsWith(string)) {
+                    numberOfWords++;
+                }
+            }
+            return numberOfWords;
+        }
+        return -1;
 
     }
 
