@@ -207,6 +207,19 @@ public class ProblemSet5 {
 
     public String intertwine(String a, String b) {
 
+      if (a != null && b != null) {
+            String output = "";
+            int i;
+            for (i = 0; i < a.length() && i < b.length(); i++) {
+                output += a.charAt(i);
+                output += b.charAt(i);
+            }
+            output += a.substring(i, a.length());
+            output += b.substring(i, b.length());
+            return output;
+        }
+        return null;
+
     }
 
     /*
