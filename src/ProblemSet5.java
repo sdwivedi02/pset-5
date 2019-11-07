@@ -157,6 +157,17 @@ public class ProblemSet5 {
 
     public long addMe(String text) {
 
+       if (text != null) {
+            long sumOfDigits = 0;
+            for (int i = 0; i < text.length(); i++) {
+                if (text.charAt(i) >= 48 && text.charAt(i) <= 57) {
+                    sumOfDigits += Character.getNumericValue(text.charAt(i));
+                }
+            }
+            return sumOfDigits;
+        }
+        return -1;
+
     }
 
     /*
