@@ -230,6 +230,17 @@ public class ProblemSet5 {
 
     public boolean isPalindrome(String text) {
 
+      if (text != null) {
+            String reverseString = "";
+            for (int i = text.length() - 1; i >= 0; i--) {
+                reverseString += text.charAt(i);
+            }
+            if (reverseString.equals(text)) {
+                return true;
+            }
+        }
+        return false;
+
     }
 }
 }
